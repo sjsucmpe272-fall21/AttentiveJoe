@@ -60,10 +60,10 @@ Make use of api’s and use of chatbot to answer some faq’s and then create a 
 
 ## Text summarization of Research papers
 ### Problem Statement
-The Internet has grown at a tremendous rate and hence there is a lot of data and documents across the web pages. The Process of reading the documents, Research/Technical papers and analysing it is a daunting task. Moreover new researchers and also experienced people feel it difficult sometimes to analyse the complete paper. The Text Summarization would analyse the different formats of research papers and would provide simplified informative summaries for the documents.
+The world of the Internet has grown at a tremendous rate and hence there is a lot of data over the web pages. The Process of reading the documents, Research/Technical papers, and analyzing them is a daunting task. Moreover, new researchers and even experienced people feel it difficult sometimes to examine the complete paper. The Text Summarization would go over the research paper and would provide a simplified informative summary for the respective paper.
 
 ### Abstract
-Currently there are a lot of people who are analysing research papers for their research, better understanding and project implementations. Providing a platform that can provide informative summaries of technical papers can make their process easier and less time consuming. In this paper we will be analysing various methods to summarize the research papers and provide solutions with the most accurate and faster solution.  
+Academicians and Researchers examine multiple research papers for their work, to get a better understanding of research done in that particular subject. Text Summarization portal can provide informative summaries of technical/research papers and can make their process easier and less time-consuming. We will provide a system that will summarize the research/technical documents and provide informative and accurate summaries to the respective document.  
 
 ### Approach
 Spacy is an advanced NLP library, which provides features like POS tagging, Sentence boundary detection & Text Classification. Provided these features we can Extract Important sentences and phrases from research papers and form a meaningful summary from those important sets of keywords and sentences.
