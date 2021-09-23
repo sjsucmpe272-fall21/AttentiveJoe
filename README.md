@@ -39,6 +39,25 @@ We used techniques like face and eye detection, eye tracking, and eye state clas
 ### Dataset links
 http://vlm1.uta.edu/~athitsos/projects/drowsiness/
 
+## Ccaas - contact center as a service
+### Problem Statement
+CCaas (contact center as a service) has gained popularity due to its flexibility of using services as needed and no installation of hardware required on premise. It allows flexibility and scalability as needed. With more agents choosing work from home and change in work environment because of pandemic, CCaas has helped the contact centers operate more efficiently as compared to traditional contact centers. In order to improve the overall customer experience AI ML can help achieve more efficiency by quickly reducing the call/chat volume or wait time and enhancing customer satisfaction.
+
+### Abstract
+AI Ml in CCaas can help with reducing call/chat volumes by smartly answering the basic FAQ's using chatbot or through IVR (interactive voice response)or by offering  smart routing of call/chat to experienced agents based on the caller. The human agent is already prepared with basic information of the customer while getting on the actual call. It can help with customer retention and ultimately improve revenue and profit.
+
+### Approach
+Make use of api’s and use of chatbot to answer some faq’s and then create a calendar event if the interaction between customer and agent goes through successfully.
+
+### Persona
+1. Call center supervisors
+2. Call center agents
+3. End users
+
+### Dataset links
+1. http://ie.technion.ac.il/serveng/callcenterdata/documentation.pdf  
+2. http://ie.technion.ac.il/serveng/callcenterdata/index.html
+
 ## Text summarization of Research papers
 ### Problem Statement
 The Internet has grown at a tremendous rate and hence there is a lot of data and documents across the web pages. The Process of reading the documents, Research/Technical papers and analysing it is a daunting task. Moreover new researchers and also experienced people feel it difficult sometimes to analyse the complete paper. The Text Summarization would analyse the different formats of research papers and would provide simplified informative summaries for the documents.
