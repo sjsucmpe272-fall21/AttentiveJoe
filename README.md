@@ -1,6 +1,6 @@
 # Team-Project-3
 
-## Student Distraction Detection during Online classes
+## AttentiveJoe
 ### Problem Statement
 Nowadays, Online video education is steadily becoming more important. The reasons are not only geographical differences between the teacher and the student, but also new teaching concepts such as “flipped classroom" and various other factors as well. In the U.S.A. nearly 60% of the students use online education. Recently the pandemic has made all the modes of teachings virtual which even more emphasizes the need to build this system.
 
