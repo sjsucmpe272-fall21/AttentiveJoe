@@ -13,6 +13,3 @@ We used techniques like face and eye detection, eye tracking, and eye state clas
 ### Persona
 1. Educational Institutions
 2. Students
-
-### Dataset links
-Not available
