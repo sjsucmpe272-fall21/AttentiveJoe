@@ -3,11 +3,10 @@
         <title>AttentiveJoe</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-        <link rel="stylesheet" href="/static/css/custom.css" >
+        <link rel="stylesheet" href="/static/css/adminlogin.css" >
         {% block style %}{% endblock %}
     </head>
     <body class="bg-light">
-      <!-- nav bar menu-->
       <nav class="navbar navbar-light bg-info pl-5 mb-5 navbar-custom">
         <a class="navbar-brand" href="#" style="color: white;">
             <img src="/static/img/logo.png" width="40" height="40" class="d-inline-block align-center mr-3 bg-white rounded" alt="" >
@@ -22,26 +21,15 @@
             </li>
         </ul>
     </nav>
-        <!-- end nav bar menu-->
-
-        <!-- flash message -->
-        {% with messages = get_flashed_messages(with_categories=true) %}
-        {% if messages %}
-          {% for category, message in messages %}
-          <div class="d-flex justify-content-center">
-            <div class="alert alert-{{ category }} alert-dismissible fade show text-secondary" role="alert">
-              {{ message }}
-              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-          </div>
-          {% endfor %}
-        {% endif %}
-        {% endwith %}
-        <!-- end flash message -->
-
-        {% block content %}{% endblock %}
+    <div class="login-page">
+      <div class="form">
+        <div class="login-form">
+          <input type="text" placeholder="username"/>
+          <input type="password" placeholder="password"/>
+          <a href="logtable"><button class="btn btn-success">Login</button></a>
+        </div>
+      </div>
+    </div>
     </body>
 </html>
 
@@ -52,7 +40,7 @@
 <script>
   // menu on active change color
    $('li.active').removeClass('active');
-   $('a[href="' + location.pathname + '"]').closest('li').addClass('active'); 
+   $('a[href="' + location.pathname + '"]').closest('li').addClass('active');
 </script>
 </script>
 {% block script %}{% endblock %}

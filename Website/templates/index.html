@@ -1,12 +1,19 @@
 {% extends "_layout.html" %}
 {% block content %}
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+<link rel="stylesheet" href="/static/css/custom.css" >
 <div class="container">
-    <div class="jumbotron text-center">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-        <link rel="stylesheet" href="/static/css/custom.css" >
-        <h1>Click the button to join the class</h1>
-        <a href="face_registration"><button class="btn btn-success">Join the Class</button></a>
+    <div class="row jumbotron">
+        <div class="col-12">
+            <h1>Click the button to join the class</h1>
+        </div>
+        <div class="col-12">
+            <form method="POST">
+                <input name="user_name" type="text" style="margin-bottom: 15px; width:50%" class="form-control" id="user_name" placeholder="Enter Name">
+                <a href="face_registration"><button class="btn btn-success">Join the Class</button></a>
+            </form>
+        </div>
     </div>
 </div>
 {% endblock %}

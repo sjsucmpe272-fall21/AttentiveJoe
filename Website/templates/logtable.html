@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="logstyles.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="/static/css/custom.css" >
+    </head>
+<body>
+    <nav class="navbar navbar-light bg-info pl-5 mb-5 navbar-custom">
+        <a class="navbar-brand" href="#" style="color: white;">
+            <img src="/static/img/logo.png" width="40" height="40" class="d-inline-block align-center mr-3 bg-white rounded" alt="" >
+            AttentiveJoe
+        </a>
+        <ul class="nav justify-content-end">
+            <li class="nav-item active .text-white">
+              <a class="nav-link" href="{{ url_for('index')}}" style="color: white;"><span class="fa fa-home mr-1"></span>Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ url_for('admin')}}"  style="color: white;"><span class="fa fa-id-badge mr-1"></span>Admin</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1 style="text-align:center;margin:50px">Admin logs</h1>
+        <table class="table" style="border: 1px solid;">
+            <thead class="thead-dark">
+            <tr>
+                <th scope="col">Username</th>
+                <th scope="col">Activity</th>
+                <th scope="col">Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for row in data %}
+                <tr>
+                    <td>{{row[1]}}</td>
+                    <td>{{row[2]}}</td>
+                    <td>{{row[3]}}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+    
+</body>
+</html>

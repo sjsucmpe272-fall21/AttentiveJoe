@@ -6,9 +6,9 @@
         <div class="container mb-2">
             <h3>Live Camera</h3>
             {% if is_camera %}
-                <a href="/face_registration?camera=off" class="btn btn-danger" role="button">Turn Off Camera</a>
+                <a href="/face_registration?camera=off&username={{username}}" class="btn btn-danger" role="button">Turn Off Camera</a>
             {% else %}
-                <a href="/face_registration?camera=on" class="btn btn-info" role="button">Turn On Camera</a>
+                <a href="/face_registration?camera=on&username={{username}}" class="btn btn-info" role="button">Turn On Camera</a>
             {% endif %}
         </div>
         <div id="video_wrapper" class="container">

@@ -78,14 +78,14 @@ def mouth_open(image):
     #cv2.imwrite('image_with_landmarks.jpg',image_with_landmarks)
     #cv2.waitKey(0)
     #cv2.destroyAllWindows()
-def yawn_detection_wrapper(frame):
+def yawn_detection_wrapper(frame, username):
     yawns = 0
     yawn_status = False
     print("Calling Yawn detection Core")
-    img, yawn_status, yawns = yawn_detection_core(frame, yawns, yawn_status)
+    img, yawn_status, yawns = yawn_detection_core(frame, yawns, yawn_status, username)
     return img
 
-def yawn_detection_core(frame, yawns, yawn_status):
+def yawn_detection_core(frame, yawns, yawn_status, username):
     image_landmarks, lip_distance = mouth_open(frame)
     #cv2.imshow('Live Landmarks', image_landmarks )
 
@@ -97,10 +97,10 @@ def yawn_detection_core(frame, yawns, yawn_status):
         cv2.putText(frame, "Subject is Yawning", (50,450),
                     cv2.FONT_HERSHEY_COMPLEX, 1,(0,0,255),2)
 
-        output_text = " Yawn Count: " + str(yawns + 1)
+        output_text = " Yawn"
 
-        query = ("INSERT INTO logs (activity, timestamp) VALUES (%s, %s)")
-        data_log = (output_text, datetime.now())
+        query = ("INSERT INTO logs (user_name, activity, timestamp) VALUES (%s, %s, %s)")
+        data_log = (username,output_text, datetime.now())
         cursor.execute(query, data_log)
         connection.commit()
 
@@ -116,14 +116,15 @@ def yawn_detection_core(frame, yawns, yawn_status):
 
     return frame, yawn_status, yawns
 
-def drowsiness_detection_wrapper(img, closed): 
-    closed = drowsiness_detection_core(img, closed) 
+def drowsiness_detection_wrapper(img, closed, username):
+    closed = drowsiness_detection_core(img, closed)
     if closed == True:
         cv2.putText(img,'Eyes closed',(50,50),cv2.FONT_HERSHEY_COMPLEX,1,(0,0,255),2)
         # print('Eyes closed!!!')
         print('Eyes closed!!!')
-        query = ("INSERT INTO logs (activity, timestamp) VALUES (%s, %s)")
-        data_log = ('Eyes closed', datetime.now())
+
+        query = ("INSERT INTO logs (user_name, activity, timestamp) VALUES (%s , %s, %s)")
+        data_log = (username, 'Eyes closed', datetime.now())
         cursor.execute(query, data_log)
         connection.commit()
     else:

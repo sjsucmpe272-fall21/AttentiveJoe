@@ -5,8 +5,11 @@ from core_service import YawnDetection
 
 
 class Recognizer():
-    def __init__(self, camera_src=0):
+    def __init__(self, camera_src=0, username=""):
+
+
         self.camera_src = camera_src
+        self.username=username
         self.camera = None
 
     
@@ -16,8 +19,9 @@ class Recognizer():
             if self.camera is None :
                 self.open()
             success, frame = self.camera.read()
-            # frame = YawnDetection.yawn_detection_wrapper(frame)
-            frame = YawnDetection.drowsiness_detection_wrapper(frame, closed)
+            print("Checking",self.username)
+            frame = YawnDetection.yawn_detection_wrapper(frame,self.username)
+            frame = YawnDetection.drowsiness_detection_wrapper(frame, closed, self.username)
 
             if not success:
                 break
@@ -36,6 +40,7 @@ class Recognizer():
         self.camera = cv2.VideoCapture(self.camera_src)
         #self.camera.set(cv2.CAP_PROP_FRAME_WIDTH, 480)
         #self.camera.set(cv2.CAP_PROP_FRAME_HEIGHT, 320)
-
+    def setUsername(self,username):
+        self.username=username
     def status(self):
         return self.camera is not None
