@@ -11,7 +11,7 @@ Learning through online video is extremely popular. But there's no way to determ
 We used techniques like face and eye detection, eye tracking, and eye state classification area. Viola and Jones have used a boosted cascade of features to detect particular objects. Template matching and support vector machine-based approach is employed to detect eye from the face image.The most important application of eye-tracking, i.e. drowsiness detection. The float boost learning for classification is used. And the concept of Clustering and regression is used for eye state classification.
 
 ### Architecture Diagram 
-
+![Architecture Diagram](./Website/AttentiveJoeArch.png)
 ### Persona
 1. Educational Institutions
 2. Students
